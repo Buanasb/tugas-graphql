@@ -3,6 +3,8 @@ import {
   initModels,
   order,
   orderCreationAttributes,
+  orderdetail,
+  orderdetailCreationAttributes,
   product,
   productCreationAttributes,
 } from './models/init-models';

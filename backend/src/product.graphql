@@ -20,6 +20,22 @@ type Mutation {
   createOrder(transcode: String, created: String): Order
   updateOrder(id: Int, transcode: String, created: String): Order
   deleteOrder(id: Int): Order
+
+  getDetailOrderDetail(id: Int): OrderDetail
+  createOrderDetail(
+    productid: Int
+    quantity: Int
+    price: Int
+    order_id: Int
+  ): OrderDetail
+  updateOrderDetail(
+    id: Int
+    productid: Int
+    quantity: Int
+    price: Int
+    order_id: Int
+  ): OrderDetail
+  deleteOrderDetail(id: Int): OrderDetail
 }
 
 type Product {

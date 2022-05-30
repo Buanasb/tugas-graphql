@@ -1,6 +1,6 @@
 type Query {
   product: [Product]
-  # orderdetail: [OrderDetail]
+  orderdetail: [OrderDetail]
 }
 
 type Mutation {

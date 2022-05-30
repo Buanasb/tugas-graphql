@@ -1,5 +1,6 @@
 type Query {
   product: [Product]
+  order: [Order]
   orderdetail: [OrderDetail]
 }
 
@@ -14,6 +15,11 @@ type Mutation {
     created: String
   ): Product
   deleteProduct(id: Int): Product
+
+  getDetailOrder(id: Int): Order
+  createOrder(transcode: String, created: String): Order
+  updateOrder(id: Int, transcode: String, created: String): Order
+  deleteOrder(id: Int): Order
 }
 
 type Product {
@@ -21,6 +27,12 @@ type Product {
   name: String
   stock: Int
   price: Int
+  created: String
+}
+
+type Order {
+  id: Int
+  transcode: String
   created: String
 }
 
